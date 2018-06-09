@@ -1,0 +1,8 @@
+*.pdf
+*.Rout
+*~
+data/lalonde_simul.RData
+data/pacman_simul.RData
+data/star_simul.RData
+results/
+figs/
