@@ -17,8 +17,11 @@ ols_adj <- function(Yobs, T, X, adjtype = c("population", "sample")){
         s1 <- sd(Yobs[T])
         s0 <- sd(Yobs[-T])
         sigmahat <- sqrt(s1^2 / n1 + s0^2 / n0 - (s1 - s0)^2 / n)
-        return(list(tauhat = rep(tauhat, 3),
-                    sigmahat = rep(sigmahat, 7)))
+        return(list(tauhat =
+                        data.frame(ra = tauhat, ra_db = tauhat),
+                    sigmahat =
+                        data.frame(HC0 = sigmahat, HC1 = sigmahat,
+                                   HC2 = sigmahat, HC3 = sigmahat)))
     }
     if (!is.matrix(X)){
         X <- as.matrix(X)
@@ -28,10 +31,9 @@ ols_adj <- function(Yobs, T, X, adjtype = c("population", "sample")){
     if (min(n1, n0) <= p){
         stop("Insufficient sample size for OLS")
     }
-    tauhat_res <- data.frame(ra = NA, ra_db = NA, ra_db_emp = NA)
-    sigmahat_res <- data.frame(HC0 = NA, HC1 = NA, HC2 = NA,
-                               HC3 = NA, HC2_emp = NA,
-                               HC3_emp = NA)
+    tauhat_res <- data.frame(ra = NA, ra_db = NA)
+    sigmahat_res <- data.frame(
+        HC0 = NA, HC1 = NA, HC2 = NA, HC3 = NA)
     
     mod1 <- lm(Yobs[T] ~ X[T, ])
     mod0 <- lm(Yobs[-T] ~ X[-T, ])
@@ -57,6 +59,10 @@ ols_adj <- function(Yobs, T, X, adjtype = c("population", "sample")){
     bias <- -n0 / n1 * Delta1 + n1 / n0 * Delta0
     tauhat_res$ra_db <- tauhat_res$ra - bias
     
+    ## Using sample leverage scores    
+    lscores1 <- hat(X[T, ])
+    lscores0 <- hat(X[-T, ])
+
     s1_HC2 <- sqrt(mean(e1^2 / (1 - pmin(lscores1, 0.99))))
     s0_HC2 <- sqrt(mean(e0^2 / (1 - pmin(lscores0, 0.99))))
     sigmahat_res$HC2 <- sqrt(s1_HC2^2 / n1 + s0_HC2^2 / n0)
@@ -64,23 +70,6 @@ ols_adj <- function(Yobs, T, X, adjtype = c("population", "sample")){
     s1_HC3 <- sqrt(mean(e1^2 / (1 - pmin(lscores1, 0.99))^2))
     s0_HC3 <- sqrt(mean(e0^2 / (1 - pmin(lscores0, 0.99))^2))
     sigmahat_res$HC3 <- sqrt(s1_HC3^2 / n1 + s0_HC3^2 / n0)
-
-    ## Using sample leverage scores    
-    lscores1 <- hat(X[T, ])
-    lscores0 <- hat(X[-T, ])
-
-    Delta1 <- sum(lscores1 * e1) / n1
-    Delta0 <- sum(lscores0 * e0) / n0
-    bias <- -n0 / n1 * Delta1 + n1 / n0 * Delta0
-    tauhat_res$ra_db_emp <- tauhat_res$ra - bias
-    
-    s1_HC2 <- sqrt(mean(e1^2 / (1 - pmin(lscores1, 0.99))))
-    s0_HC2 <- sqrt(mean(e0^2 / (1 - pmin(lscores0, 0.99))))
-    sigmahat_res$HC2_emp <- sqrt(s1_HC2^2 / n1 + s0_HC2^2 / n0)
-
-    s1_HC3 <- sqrt(mean(e1^2 / (1 - pmin(lscores1, 0.99))^2))
-    s0_HC3 <- sqrt(mean(e0^2 / (1 - pmin(lscores0, 0.99))^2))
-    sigmahat_res$HC3_emp <- sqrt(s1_HC3^2 / n1 + s0_HC3^2 / n0)
     
     return(list(tauhat = tauhat_res,
                 sigmahat = sigmahat_res))

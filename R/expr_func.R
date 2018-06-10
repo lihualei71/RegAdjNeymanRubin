@@ -15,14 +15,11 @@ ols_adj_expr <- function(Y1, Y0, X, pi1 = 1 / 2,
     sigma <- sqrt(var(e1) / n1 + var(e0) / n0 - var(e1 - e0) / n)
 
     tauhats <- data.frame(ra = rep(NA, nreps),
-                          ra_db = rep(NA, nreps),
-                          ra_db_emp = rep(NA, nreps))
+                          ra_db = rep(NA, nreps))
     sigmahats <- data.frame(HC0 = rep(NA, nreps),
                             HC1 = rep(NA, nreps),
                             HC2 = rep(NA, nreps),
-                            HC3 = rep(NA, nreps),
-                            HC2_emp = rep(NA, nreps),
-                            HC3_emp = rep(NA, nreps))
+                            HC3 = rep(NA, nreps))
     
     for (i in 1:nreps){
         T <- sample(n, n1)
@@ -35,15 +32,14 @@ ols_adj_expr <- function(Y1, Y0, X, pi1 = 1 / 2,
     }
     truth_sigma <- as.numeric(apply(tauhats, 2, sd))
     sk <- as.numeric(apply(tauhats, 2, skewness))
-    sk <- data.frame(tauhat_type = c("ra", "ra_db", "ra_db_emp"),
+    sk <- data.frame(tauhat_type = c("ra", "ra_db"),
                      skewness = sk)
     ku <- as.numeric(apply(tauhats, 2, kurtosis))
-    ku <- data.frame(tauhat_type = c("ra", "ra_db", "ra_db_emp"),
+    ku <- data.frame(tauhat_type = c("ra", "ra_db"),
                      kurtosis = ku)
     sigmahats <- data.frame(
         truth = truth_sigma[1],
         truth_de = truth_sigma[2],
-        truth_de_emp = truth_sigma[3],
         theoretical = rep(sigma, nreps),
         sigmahats)
     types <- expand.grid(names(tauhats), names(sigmahats))
