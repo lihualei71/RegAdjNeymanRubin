@@ -24,10 +24,17 @@ The folder `bash/` contains all files that facilitate job submission to the clus
 
 - Each job will save output as a `.RData` file into the folder `data/`. `asym_simul_post.R`, `synthetic_simul_post.R`, `real_simul_post.R` will marge them.
 
+- Before running the experiments, make sure running the following code to generate the folder `results/`
+
+```
+mkdir results
+```
+
 ## Plots 
 For those who are not willing to replicate all results, we provide the merged results `asym_simul_summary.RData`, `synthetic_simul_summary.RData` and `real_simul_summary.RData` in the folder `data/`, which are ready for making all plots. The figures will be generated in the folder `figs/` by running the following commands
 
 ```
+mkdir figs
 cd R
 R CMD BATCH --no-save lalonde_prep.R
 R CMD BATCH --no-save pacman_prep.R
