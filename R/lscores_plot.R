@@ -10,6 +10,7 @@ for (i in 1:m){
 mean(kappa_list)
 
 ## Plot of leverage scores for random matrices
+
 n <- 2^12
 set.seed(20180606)
 
