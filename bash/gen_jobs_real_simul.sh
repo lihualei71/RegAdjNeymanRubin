@@ -2,11 +2,11 @@
 
 params_filename='params_real_simul.txt'
 
-while read data residtype seed
+while read data residtype thresh seed
 do
-    filename='../results/"'$data'"_resid"'$residtype'"_seed"'$seed'".sh'
+    filename='../results/"'$data'"_resid"'$residtype'"_thresh"'$thresh'"_seed"'$seed'".sh'
     echo $filename
-    Rout_filename='../results/"'$data'"_resid"'$residtype'"_seed"'$seed'".Rout'
+    Rout_filename='../results/"'$data'"_resid"'$residtype'"_thresh"'$thresh'"_seed"'$seed'".Rout'
     echo $Rout_filename
     touch $filename
     echo '#!/bin/bash' > $filename
@@ -14,9 +14,10 @@ do
     echo 'export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK' >> $filename
     echo '' >> $filename
     echo 'export data="'$data'"' >> $filename
-    echo 'export residtype="'$residtype'"' >> $filename    
+    echo 'export residtype="'$residtype'"' >> $filename
+    echo 'export thresh="'$thresh'"' >> $filename        
     echo 'export seed="'$seed'"' >> $filename
-    echo "R CMD BATCH --no-save ../R/real_simul.R "$Rout_filename >> $filename
+    echo "R CMD BATCH --no-save real_simul.R "$Rout_filename >> $filename
     chmod 755 $filename
     sbatch $filename
 done < $params_filename

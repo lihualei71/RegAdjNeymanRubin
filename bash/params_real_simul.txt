@@ -1,400 +1,800 @@
-lalonde_simul normal 1
-lalonde_simul t1 1
-lalonde_simul t2 1
-lalonde_simul worst 1
-lalonde_simul normal 2
-lalonde_simul t1 2
-lalonde_simul t2 2
-lalonde_simul worst 2
-lalonde_simul normal 3
-lalonde_simul t1 3
-lalonde_simul t2 3
-lalonde_simul worst 3
-lalonde_simul normal 4
-lalonde_simul t1 4
-lalonde_simul t2 4
-lalonde_simul worst 4
-lalonde_simul normal 5
-lalonde_simul t1 5
-lalonde_simul t2 5
-lalonde_simul worst 5
-lalonde_simul normal 6
-lalonde_simul t1 6
-lalonde_simul t2 6
-lalonde_simul worst 6
-lalonde_simul normal 7
-lalonde_simul t1 7
-lalonde_simul t2 7
-lalonde_simul worst 7
-lalonde_simul normal 8
-lalonde_simul t1 8
-lalonde_simul t2 8
-lalonde_simul worst 8
-lalonde_simul normal 9
-lalonde_simul t1 9
-lalonde_simul t2 9
-lalonde_simul worst 9
-lalonde_simul normal 10
-lalonde_simul t1 10
-lalonde_simul t2 10
-lalonde_simul worst 10
-lalonde_simul normal 11
-lalonde_simul t1 11
-lalonde_simul t2 11
-lalonde_simul worst 11
-lalonde_simul normal 12
-lalonde_simul t1 12
-lalonde_simul t2 12
-lalonde_simul worst 12
-lalonde_simul normal 13
-lalonde_simul t1 13
-lalonde_simul t2 13
-lalonde_simul worst 13
-lalonde_simul normal 14
-lalonde_simul t1 14
-lalonde_simul t2 14
-lalonde_simul worst 14
-lalonde_simul normal 15
-lalonde_simul t1 15
-lalonde_simul t2 15
-lalonde_simul worst 15
-lalonde_simul normal 16
-lalonde_simul t1 16
-lalonde_simul t2 16
-lalonde_simul worst 16
-lalonde_simul normal 17
-lalonde_simul t1 17
-lalonde_simul t2 17
-lalonde_simul worst 17
-lalonde_simul normal 18
-lalonde_simul t1 18
-lalonde_simul t2 18
-lalonde_simul worst 18
-lalonde_simul normal 19
-lalonde_simul t1 19
-lalonde_simul t2 19
-lalonde_simul worst 19
-lalonde_simul normal 20
-lalonde_simul t1 20
-lalonde_simul t2 20
-lalonde_simul worst 20
-lalonde_simul normal 21
-lalonde_simul t1 21
-lalonde_simul t2 21
-lalonde_simul worst 21
-lalonde_simul normal 22
-lalonde_simul t1 22
-lalonde_simul t2 22
-lalonde_simul worst 22
-lalonde_simul normal 23
-lalonde_simul t1 23
-lalonde_simul t2 23
-lalonde_simul worst 23
-lalonde_simul normal 24
-lalonde_simul t1 24
-lalonde_simul t2 24
-lalonde_simul worst 24
-lalonde_simul normal 25
-lalonde_simul t1 25
-lalonde_simul t2 25
-lalonde_simul worst 25
-lalonde_simul normal 26
-lalonde_simul t1 26
-lalonde_simul t2 26
-lalonde_simul worst 26
-lalonde_simul normal 27
-lalonde_simul t1 27
-lalonde_simul t2 27
-lalonde_simul worst 27
-lalonde_simul normal 28
-lalonde_simul t1 28
-lalonde_simul t2 28
-lalonde_simul worst 28
-lalonde_simul normal 29
-lalonde_simul t1 29
-lalonde_simul t2 29
-lalonde_simul worst 29
-lalonde_simul normal 30
-lalonde_simul t1 30
-lalonde_simul t2 30
-lalonde_simul worst 30
-lalonde_simul normal 31
-lalonde_simul t1 31
-lalonde_simul t2 31
-lalonde_simul worst 31
-lalonde_simul normal 32
-lalonde_simul t1 32
-lalonde_simul t2 32
-lalonde_simul worst 32
-lalonde_simul normal 33
-lalonde_simul t1 33
-lalonde_simul t2 33
-lalonde_simul worst 33
-lalonde_simul normal 34
-lalonde_simul t1 34
-lalonde_simul t2 34
-lalonde_simul worst 34
-lalonde_simul normal 35
-lalonde_simul t1 35
-lalonde_simul t2 35
-lalonde_simul worst 35
-lalonde_simul normal 36
-lalonde_simul t1 36
-lalonde_simul t2 36
-lalonde_simul worst 36
-lalonde_simul normal 37
-lalonde_simul t1 37
-lalonde_simul t2 37
-lalonde_simul worst 37
-lalonde_simul normal 38
-lalonde_simul t1 38
-lalonde_simul t2 38
-lalonde_simul worst 38
-lalonde_simul normal 39
-lalonde_simul t1 39
-lalonde_simul t2 39
-lalonde_simul worst 39
-lalonde_simul normal 40
-lalonde_simul t1 40
-lalonde_simul t2 40
-lalonde_simul worst 40
-lalonde_simul normal 41
-lalonde_simul t1 41
-lalonde_simul t2 41
-lalonde_simul worst 41
-lalonde_simul normal 42
-lalonde_simul t1 42
-lalonde_simul t2 42
-lalonde_simul worst 42
-lalonde_simul normal 43
-lalonde_simul t1 43
-lalonde_simul t2 43
-lalonde_simul worst 43
-lalonde_simul normal 44
-lalonde_simul t1 44
-lalonde_simul t2 44
-lalonde_simul worst 44
-lalonde_simul normal 45
-lalonde_simul t1 45
-lalonde_simul t2 45
-lalonde_simul worst 45
-lalonde_simul normal 46
-lalonde_simul t1 46
-lalonde_simul t2 46
-lalonde_simul worst 46
-lalonde_simul normal 47
-lalonde_simul t1 47
-lalonde_simul t2 47
-lalonde_simul worst 47
-lalonde_simul normal 48
-lalonde_simul t1 48
-lalonde_simul t2 48
-lalonde_simul worst 48
-lalonde_simul normal 49
-lalonde_simul t1 49
-lalonde_simul t2 49
-lalonde_simul worst 49
-lalonde_simul normal 50
-lalonde_simul t1 50
-lalonde_simul t2 50
-lalonde_simul worst 50
-pacman_simul normal 1
-pacman_simul t1 1
-pacman_simul t2 1
-pacman_simul worst 1
-pacman_simul normal 2
-pacman_simul t1 2
-pacman_simul t2 2
-pacman_simul worst 2
-pacman_simul normal 3
-pacman_simul t1 3
-pacman_simul t2 3
-pacman_simul worst 3
-pacman_simul normal 4
-pacman_simul t1 4
-pacman_simul t2 4
-pacman_simul worst 4
-pacman_simul normal 5
-pacman_simul t1 5
-pacman_simul t2 5
-pacman_simul worst 5
-pacman_simul normal 6
-pacman_simul t1 6
-pacman_simul t2 6
-pacman_simul worst 6
-pacman_simul normal 7
-pacman_simul t1 7
-pacman_simul t2 7
-pacman_simul worst 7
-pacman_simul normal 8
-pacman_simul t1 8
-pacman_simul t2 8
-pacman_simul worst 8
-pacman_simul normal 9
-pacman_simul t1 9
-pacman_simul t2 9
-pacman_simul worst 9
-pacman_simul normal 10
-pacman_simul t1 10
-pacman_simul t2 10
-pacman_simul worst 10
-pacman_simul normal 11
-pacman_simul t1 11
-pacman_simul t2 11
-pacman_simul worst 11
-pacman_simul normal 12
-pacman_simul t1 12
-pacman_simul t2 12
-pacman_simul worst 12
-pacman_simul normal 13
-pacman_simul t1 13
-pacman_simul t2 13
-pacman_simul worst 13
-pacman_simul normal 14
-pacman_simul t1 14
-pacman_simul t2 14
-pacman_simul worst 14
-pacman_simul normal 15
-pacman_simul t1 15
-pacman_simul t2 15
-pacman_simul worst 15
-pacman_simul normal 16
-pacman_simul t1 16
-pacman_simul t2 16
-pacman_simul worst 16
-pacman_simul normal 17
-pacman_simul t1 17
-pacman_simul t2 17
-pacman_simul worst 17
-pacman_simul normal 18
-pacman_simul t1 18
-pacman_simul t2 18
-pacman_simul worst 18
-pacman_simul normal 19
-pacman_simul t1 19
-pacman_simul t2 19
-pacman_simul worst 19
-pacman_simul normal 20
-pacman_simul t1 20
-pacman_simul t2 20
-pacman_simul worst 20
-pacman_simul normal 21
-pacman_simul t1 21
-pacman_simul t2 21
-pacman_simul worst 21
-pacman_simul normal 22
-pacman_simul t1 22
-pacman_simul t2 22
-pacman_simul worst 22
-pacman_simul normal 23
-pacman_simul t1 23
-pacman_simul t2 23
-pacman_simul worst 23
-pacman_simul normal 24
-pacman_simul t1 24
-pacman_simul t2 24
-pacman_simul worst 24
-pacman_simul normal 25
-pacman_simul t1 25
-pacman_simul t2 25
-pacman_simul worst 25
-pacman_simul normal 26
-pacman_simul t1 26
-pacman_simul t2 26
-pacman_simul worst 26
-pacman_simul normal 27
-pacman_simul t1 27
-pacman_simul t2 27
-pacman_simul worst 27
-pacman_simul normal 28
-pacman_simul t1 28
-pacman_simul t2 28
-pacman_simul worst 28
-pacman_simul normal 29
-pacman_simul t1 29
-pacman_simul t2 29
-pacman_simul worst 29
-pacman_simul normal 30
-pacman_simul t1 30
-pacman_simul t2 30
-pacman_simul worst 30
-pacman_simul normal 31
-pacman_simul t1 31
-pacman_simul t2 31
-pacman_simul worst 31
-pacman_simul normal 32
-pacman_simul t1 32
-pacman_simul t2 32
-pacman_simul worst 32
-pacman_simul normal 33
-pacman_simul t1 33
-pacman_simul t2 33
-pacman_simul worst 33
-pacman_simul normal 34
-pacman_simul t1 34
-pacman_simul t2 34
-pacman_simul worst 34
-pacman_simul normal 35
-pacman_simul t1 35
-pacman_simul t2 35
-pacman_simul worst 35
-pacman_simul normal 36
-pacman_simul t1 36
-pacman_simul t2 36
-pacman_simul worst 36
-pacman_simul normal 37
-pacman_simul t1 37
-pacman_simul t2 37
-pacman_simul worst 37
-pacman_simul normal 38
-pacman_simul t1 38
-pacman_simul t2 38
-pacman_simul worst 38
-pacman_simul normal 39
-pacman_simul t1 39
-pacman_simul t2 39
-pacman_simul worst 39
-pacman_simul normal 40
-pacman_simul t1 40
-pacman_simul t2 40
-pacman_simul worst 40
-pacman_simul normal 41
-pacman_simul t1 41
-pacman_simul t2 41
-pacman_simul worst 41
-pacman_simul normal 42
-pacman_simul t1 42
-pacman_simul t2 42
-pacman_simul worst 42
-pacman_simul normal 43
-pacman_simul t1 43
-pacman_simul t2 43
-pacman_simul worst 43
-pacman_simul normal 44
-pacman_simul t1 44
-pacman_simul t2 44
-pacman_simul worst 44
-pacman_simul normal 45
-pacman_simul t1 45
-pacman_simul t2 45
-pacman_simul worst 45
-pacman_simul normal 46
-pacman_simul t1 46
-pacman_simul t2 46
-pacman_simul worst 46
-pacman_simul normal 47
-pacman_simul t1 47
-pacman_simul t2 47
-pacman_simul worst 47
-pacman_simul normal 48
-pacman_simul t1 48
-pacman_simul t2 48
-pacman_simul worst 48
-pacman_simul normal 49
-pacman_simul t1 49
-pacman_simul t2 49
-pacman_simul worst 49
-pacman_simul normal 50
-pacman_simul t1 50
-pacman_simul t2 50
-pacman_simul worst 50
+star_simul normal 0 1
+star_simul t1 0 1
+star_simul t2 0 1
+star_simul worst 0 1
+star_simul normal 0 2
+star_simul t1 0 2
+star_simul t2 0 2
+star_simul worst 0 2
+star_simul normal 0 3
+star_simul t1 0 3
+star_simul t2 0 3
+star_simul worst 0 3
+star_simul normal 0 4
+star_simul t1 0 4
+star_simul t2 0 4
+star_simul worst 0 4
+star_simul normal 0 5
+star_simul t1 0 5
+star_simul t2 0 5
+star_simul worst 0 5
+star_simul normal 0 6
+star_simul t1 0 6
+star_simul t2 0 6
+star_simul worst 0 6
+star_simul normal 0 7
+star_simul t1 0 7
+star_simul t2 0 7
+star_simul worst 0 7
+star_simul normal 0 8
+star_simul t1 0 8
+star_simul t2 0 8
+star_simul worst 0 8
+star_simul normal 0 9
+star_simul t1 0 9
+star_simul t2 0 9
+star_simul worst 0 9
+star_simul normal 0 10
+star_simul t1 0 10
+star_simul t2 0 10
+star_simul worst 0 10
+star_simul normal 0 11
+star_simul t1 0 11
+star_simul t2 0 11
+star_simul worst 0 11
+star_simul normal 0 12
+star_simul t1 0 12
+star_simul t2 0 12
+star_simul worst 0 12
+star_simul normal 0 13
+star_simul t1 0 13
+star_simul t2 0 13
+star_simul worst 0 13
+star_simul normal 0 14
+star_simul t1 0 14
+star_simul t2 0 14
+star_simul worst 0 14
+star_simul normal 0 15
+star_simul t1 0 15
+star_simul t2 0 15
+star_simul worst 0 15
+star_simul normal 0 16
+star_simul t1 0 16
+star_simul t2 0 16
+star_simul worst 0 16
+star_simul normal 0 17
+star_simul t1 0 17
+star_simul t2 0 17
+star_simul worst 0 17
+star_simul normal 0 18
+star_simul t1 0 18
+star_simul t2 0 18
+star_simul worst 0 18
+star_simul normal 0 19
+star_simul t1 0 19
+star_simul t2 0 19
+star_simul worst 0 19
+star_simul normal 0 20
+star_simul t1 0 20
+star_simul t2 0 20
+star_simul worst 0 20
+star_simul normal 0 21
+star_simul t1 0 21
+star_simul t2 0 21
+star_simul worst 0 21
+star_simul normal 0 22
+star_simul t1 0 22
+star_simul t2 0 22
+star_simul worst 0 22
+star_simul normal 0 23
+star_simul t1 0 23
+star_simul t2 0 23
+star_simul worst 0 23
+star_simul normal 0 24
+star_simul t1 0 24
+star_simul t2 0 24
+star_simul worst 0 24
+star_simul normal 0 25
+star_simul t1 0 25
+star_simul t2 0 25
+star_simul worst 0 25
+star_simul normal 0 26
+star_simul t1 0 26
+star_simul t2 0 26
+star_simul worst 0 26
+star_simul normal 0 27
+star_simul t1 0 27
+star_simul t2 0 27
+star_simul worst 0 27
+star_simul normal 0 28
+star_simul t1 0 28
+star_simul t2 0 28
+star_simul worst 0 28
+star_simul normal 0 29
+star_simul t1 0 29
+star_simul t2 0 29
+star_simul worst 0 29
+star_simul normal 0 30
+star_simul t1 0 30
+star_simul t2 0 30
+star_simul worst 0 30
+star_simul normal 0 31
+star_simul t1 0 31
+star_simul t2 0 31
+star_simul worst 0 31
+star_simul normal 0 32
+star_simul t1 0 32
+star_simul t2 0 32
+star_simul worst 0 32
+star_simul normal 0 33
+star_simul t1 0 33
+star_simul t2 0 33
+star_simul worst 0 33
+star_simul normal 0 34
+star_simul t1 0 34
+star_simul t2 0 34
+star_simul worst 0 34
+star_simul normal 0 35
+star_simul t1 0 35
+star_simul t2 0 35
+star_simul worst 0 35
+star_simul normal 0 36
+star_simul t1 0 36
+star_simul t2 0 36
+star_simul worst 0 36
+star_simul normal 0 37
+star_simul t1 0 37
+star_simul t2 0 37
+star_simul worst 0 37
+star_simul normal 0 38
+star_simul t1 0 38
+star_simul t2 0 38
+star_simul worst 0 38
+star_simul normal 0 39
+star_simul t1 0 39
+star_simul t2 0 39
+star_simul worst 0 39
+star_simul normal 0 40
+star_simul t1 0 40
+star_simul t2 0 40
+star_simul worst 0 40
+star_simul normal 0 41
+star_simul t1 0 41
+star_simul t2 0 41
+star_simul worst 0 41
+star_simul normal 0 42
+star_simul t1 0 42
+star_simul t2 0 42
+star_simul worst 0 42
+star_simul normal 0 43
+star_simul t1 0 43
+star_simul t2 0 43
+star_simul worst 0 43
+star_simul normal 0 44
+star_simul t1 0 44
+star_simul t2 0 44
+star_simul worst 0 44
+star_simul normal 0 45
+star_simul t1 0 45
+star_simul t2 0 45
+star_simul worst 0 45
+star_simul normal 0 46
+star_simul t1 0 46
+star_simul t2 0 46
+star_simul worst 0 46
+star_simul normal 0 47
+star_simul t1 0 47
+star_simul t2 0 47
+star_simul worst 0 47
+star_simul normal 0 48
+star_simul t1 0 48
+star_simul t2 0 48
+star_simul worst 0 48
+star_simul normal 0 49
+star_simul t1 0 49
+star_simul t2 0 49
+star_simul worst 0 49
+star_simul normal 0 50
+star_simul t1 0 50
+star_simul t2 0 50
+star_simul worst 0 50
+lalonde_simul normal 0 1
+lalonde_simul t1 0 1
+lalonde_simul t2 0 1
+lalonde_simul worst 0 1
+lalonde_simul normal 0 2
+lalonde_simul t1 0 2
+lalonde_simul t2 0 2
+lalonde_simul worst 0 2
+lalonde_simul normal 0 3
+lalonde_simul t1 0 3
+lalonde_simul t2 0 3
+lalonde_simul worst 0 3
+lalonde_simul normal 0 4
+lalonde_simul t1 0 4
+lalonde_simul t2 0 4
+lalonde_simul worst 0 4
+lalonde_simul normal 0 5
+lalonde_simul t1 0 5
+lalonde_simul t2 0 5
+lalonde_simul worst 0 5
+lalonde_simul normal 0 6
+lalonde_simul t1 0 6
+lalonde_simul t2 0 6
+lalonde_simul worst 0 6
+lalonde_simul normal 0 7
+lalonde_simul t1 0 7
+lalonde_simul t2 0 7
+lalonde_simul worst 0 7
+lalonde_simul normal 0 8
+lalonde_simul t1 0 8
+lalonde_simul t2 0 8
+lalonde_simul worst 0 8
+lalonde_simul normal 0 9
+lalonde_simul t1 0 9
+lalonde_simul t2 0 9
+lalonde_simul worst 0 9
+lalonde_simul normal 0 10
+lalonde_simul t1 0 10
+lalonde_simul t2 0 10
+lalonde_simul worst 0 10
+lalonde_simul normal 0 11
+lalonde_simul t1 0 11
+lalonde_simul t2 0 11
+lalonde_simul worst 0 11
+lalonde_simul normal 0 12
+lalonde_simul t1 0 12
+lalonde_simul t2 0 12
+lalonde_simul worst 0 12
+lalonde_simul normal 0 13
+lalonde_simul t1 0 13
+lalonde_simul t2 0 13
+lalonde_simul worst 0 13
+lalonde_simul normal 0 14
+lalonde_simul t1 0 14
+lalonde_simul t2 0 14
+lalonde_simul worst 0 14
+lalonde_simul normal 0 15
+lalonde_simul t1 0 15
+lalonde_simul t2 0 15
+lalonde_simul worst 0 15
+lalonde_simul normal 0 16
+lalonde_simul t1 0 16
+lalonde_simul t2 0 16
+lalonde_simul worst 0 16
+lalonde_simul normal 0 17
+lalonde_simul t1 0 17
+lalonde_simul t2 0 17
+lalonde_simul worst 0 17
+lalonde_simul normal 0 18
+lalonde_simul t1 0 18
+lalonde_simul t2 0 18
+lalonde_simul worst 0 18
+lalonde_simul normal 0 19
+lalonde_simul t1 0 19
+lalonde_simul t2 0 19
+lalonde_simul worst 0 19
+lalonde_simul normal 0 20
+lalonde_simul t1 0 20
+lalonde_simul t2 0 20
+lalonde_simul worst 0 20
+lalonde_simul normal 0 21
+lalonde_simul t1 0 21
+lalonde_simul t2 0 21
+lalonde_simul worst 0 21
+lalonde_simul normal 0 22
+lalonde_simul t1 0 22
+lalonde_simul t2 0 22
+lalonde_simul worst 0 22
+lalonde_simul normal 0 23
+lalonde_simul t1 0 23
+lalonde_simul t2 0 23
+lalonde_simul worst 0 23
+lalonde_simul normal 0 24
+lalonde_simul t1 0 24
+lalonde_simul t2 0 24
+lalonde_simul worst 0 24
+lalonde_simul normal 0 25
+lalonde_simul t1 0 25
+lalonde_simul t2 0 25
+lalonde_simul worst 0 25
+lalonde_simul normal 0 26
+lalonde_simul t1 0 26
+lalonde_simul t2 0 26
+lalonde_simul worst 0 26
+lalonde_simul normal 0 27
+lalonde_simul t1 0 27
+lalonde_simul t2 0 27
+lalonde_simul worst 0 27
+lalonde_simul normal 0 28
+lalonde_simul t1 0 28
+lalonde_simul t2 0 28
+lalonde_simul worst 0 28
+lalonde_simul normal 0 29
+lalonde_simul t1 0 29
+lalonde_simul t2 0 29
+lalonde_simul worst 0 29
+lalonde_simul normal 0 30
+lalonde_simul t1 0 30
+lalonde_simul t2 0 30
+lalonde_simul worst 0 30
+lalonde_simul normal 0 31
+lalonde_simul t1 0 31
+lalonde_simul t2 0 31
+lalonde_simul worst 0 31
+lalonde_simul normal 0 32
+lalonde_simul t1 0 32
+lalonde_simul t2 0 32
+lalonde_simul worst 0 32
+lalonde_simul normal 0 33
+lalonde_simul t1 0 33
+lalonde_simul t2 0 33
+lalonde_simul worst 0 33
+lalonde_simul normal 0 34
+lalonde_simul t1 0 34
+lalonde_simul t2 0 34
+lalonde_simul worst 0 34
+lalonde_simul normal 0 35
+lalonde_simul t1 0 35
+lalonde_simul t2 0 35
+lalonde_simul worst 0 35
+lalonde_simul normal 0 36
+lalonde_simul t1 0 36
+lalonde_simul t2 0 36
+lalonde_simul worst 0 36
+lalonde_simul normal 0 37
+lalonde_simul t1 0 37
+lalonde_simul t2 0 37
+lalonde_simul worst 0 37
+lalonde_simul normal 0 38
+lalonde_simul t1 0 38
+lalonde_simul t2 0 38
+lalonde_simul worst 0 38
+lalonde_simul normal 0 39
+lalonde_simul t1 0 39
+lalonde_simul t2 0 39
+lalonde_simul worst 0 39
+lalonde_simul normal 0 40
+lalonde_simul t1 0 40
+lalonde_simul t2 0 40
+lalonde_simul worst 0 40
+lalonde_simul normal 0 41
+lalonde_simul t1 0 41
+lalonde_simul t2 0 41
+lalonde_simul worst 0 41
+lalonde_simul normal 0 42
+lalonde_simul t1 0 42
+lalonde_simul t2 0 42
+lalonde_simul worst 0 42
+lalonde_simul normal 0 43
+lalonde_simul t1 0 43
+lalonde_simul t2 0 43
+lalonde_simul worst 0 43
+lalonde_simul normal 0 44
+lalonde_simul t1 0 44
+lalonde_simul t2 0 44
+lalonde_simul worst 0 44
+lalonde_simul normal 0 45
+lalonde_simul t1 0 45
+lalonde_simul t2 0 45
+lalonde_simul worst 0 45
+lalonde_simul normal 0 46
+lalonde_simul t1 0 46
+lalonde_simul t2 0 46
+lalonde_simul worst 0 46
+lalonde_simul normal 0 47
+lalonde_simul t1 0 47
+lalonde_simul t2 0 47
+lalonde_simul worst 0 47
+lalonde_simul normal 0 48
+lalonde_simul t1 0 48
+lalonde_simul t2 0 48
+lalonde_simul worst 0 48
+lalonde_simul normal 0 49
+lalonde_simul t1 0 49
+lalonde_simul t2 0 49
+lalonde_simul worst 0 49
+lalonde_simul normal 0 50
+lalonde_simul t1 0 50
+lalonde_simul t2 0 50
+lalonde_simul worst 0 50
+star_simul normal 0.025 1
+star_simul t1 0.025 1
+star_simul t2 0.025 1
+star_simul worst 0.025 1
+star_simul normal 0.025 2
+star_simul t1 0.025 2
+star_simul t2 0.025 2
+star_simul worst 0.025 2
+star_simul normal 0.025 3
+star_simul t1 0.025 3
+star_simul t2 0.025 3
+star_simul worst 0.025 3
+star_simul normal 0.025 4
+star_simul t1 0.025 4
+star_simul t2 0.025 4
+star_simul worst 0.025 4
+star_simul normal 0.025 5
+star_simul t1 0.025 5
+star_simul t2 0.025 5
+star_simul worst 0.025 5
+star_simul normal 0.025 6
+star_simul t1 0.025 6
+star_simul t2 0.025 6
+star_simul worst 0.025 6
+star_simul normal 0.025 7
+star_simul t1 0.025 7
+star_simul t2 0.025 7
+star_simul worst 0.025 7
+star_simul normal 0.025 8
+star_simul t1 0.025 8
+star_simul t2 0.025 8
+star_simul worst 0.025 8
+star_simul normal 0.025 9
+star_simul t1 0.025 9
+star_simul t2 0.025 9
+star_simul worst 0.025 9
+star_simul normal 0.025 10
+star_simul t1 0.025 10
+star_simul t2 0.025 10
+star_simul worst 0.025 10
+star_simul normal 0.025 11
+star_simul t1 0.025 11
+star_simul t2 0.025 11
+star_simul worst 0.025 11
+star_simul normal 0.025 12
+star_simul t1 0.025 12
+star_simul t2 0.025 12
+star_simul worst 0.025 12
+star_simul normal 0.025 13
+star_simul t1 0.025 13
+star_simul t2 0.025 13
+star_simul worst 0.025 13
+star_simul normal 0.025 14
+star_simul t1 0.025 14
+star_simul t2 0.025 14
+star_simul worst 0.025 14
+star_simul normal 0.025 15
+star_simul t1 0.025 15
+star_simul t2 0.025 15
+star_simul worst 0.025 15
+star_simul normal 0.025 16
+star_simul t1 0.025 16
+star_simul t2 0.025 16
+star_simul worst 0.025 16
+star_simul normal 0.025 17
+star_simul t1 0.025 17
+star_simul t2 0.025 17
+star_simul worst 0.025 17
+star_simul normal 0.025 18
+star_simul t1 0.025 18
+star_simul t2 0.025 18
+star_simul worst 0.025 18
+star_simul normal 0.025 19
+star_simul t1 0.025 19
+star_simul t2 0.025 19
+star_simul worst 0.025 19
+star_simul normal 0.025 20
+star_simul t1 0.025 20
+star_simul t2 0.025 20
+star_simul worst 0.025 20
+star_simul normal 0.025 21
+star_simul t1 0.025 21
+star_simul t2 0.025 21
+star_simul worst 0.025 21
+star_simul normal 0.025 22
+star_simul t1 0.025 22
+star_simul t2 0.025 22
+star_simul worst 0.025 22
+star_simul normal 0.025 23
+star_simul t1 0.025 23
+star_simul t2 0.025 23
+star_simul worst 0.025 23
+star_simul normal 0.025 24
+star_simul t1 0.025 24
+star_simul t2 0.025 24
+star_simul worst 0.025 24
+star_simul normal 0.025 25
+star_simul t1 0.025 25
+star_simul t2 0.025 25
+star_simul worst 0.025 25
+star_simul normal 0.025 26
+star_simul t1 0.025 26
+star_simul t2 0.025 26
+star_simul worst 0.025 26
+star_simul normal 0.025 27
+star_simul t1 0.025 27
+star_simul t2 0.025 27
+star_simul worst 0.025 27
+star_simul normal 0.025 28
+star_simul t1 0.025 28
+star_simul t2 0.025 28
+star_simul worst 0.025 28
+star_simul normal 0.025 29
+star_simul t1 0.025 29
+star_simul t2 0.025 29
+star_simul worst 0.025 29
+star_simul normal 0.025 30
+star_simul t1 0.025 30
+star_simul t2 0.025 30
+star_simul worst 0.025 30
+star_simul normal 0.025 31
+star_simul t1 0.025 31
+star_simul t2 0.025 31
+star_simul worst 0.025 31
+star_simul normal 0.025 32
+star_simul t1 0.025 32
+star_simul t2 0.025 32
+star_simul worst 0.025 32
+star_simul normal 0.025 33
+star_simul t1 0.025 33
+star_simul t2 0.025 33
+star_simul worst 0.025 33
+star_simul normal 0.025 34
+star_simul t1 0.025 34
+star_simul t2 0.025 34
+star_simul worst 0.025 34
+star_simul normal 0.025 35
+star_simul t1 0.025 35
+star_simul t2 0.025 35
+star_simul worst 0.025 35
+star_simul normal 0.025 36
+star_simul t1 0.025 36
+star_simul t2 0.025 36
+star_simul worst 0.025 36
+star_simul normal 0.025 37
+star_simul t1 0.025 37
+star_simul t2 0.025 37
+star_simul worst 0.025 37
+star_simul normal 0.025 38
+star_simul t1 0.025 38
+star_simul t2 0.025 38
+star_simul worst 0.025 38
+star_simul normal 0.025 39
+star_simul t1 0.025 39
+star_simul t2 0.025 39
+star_simul worst 0.025 39
+star_simul normal 0.025 40
+star_simul t1 0.025 40
+star_simul t2 0.025 40
+star_simul worst 0.025 40
+star_simul normal 0.025 41
+star_simul t1 0.025 41
+star_simul t2 0.025 41
+star_simul worst 0.025 41
+star_simul normal 0.025 42
+star_simul t1 0.025 42
+star_simul t2 0.025 42
+star_simul worst 0.025 42
+star_simul normal 0.025 43
+star_simul t1 0.025 43
+star_simul t2 0.025 43
+star_simul worst 0.025 43
+star_simul normal 0.025 44
+star_simul t1 0.025 44
+star_simul t2 0.025 44
+star_simul worst 0.025 44
+star_simul normal 0.025 45
+star_simul t1 0.025 45
+star_simul t2 0.025 45
+star_simul worst 0.025 45
+star_simul normal 0.025 46
+star_simul t1 0.025 46
+star_simul t2 0.025 46
+star_simul worst 0.025 46
+star_simul normal 0.025 47
+star_simul t1 0.025 47
+star_simul t2 0.025 47
+star_simul worst 0.025 47
+star_simul normal 0.025 48
+star_simul t1 0.025 48
+star_simul t2 0.025 48
+star_simul worst 0.025 48
+star_simul normal 0.025 49
+star_simul t1 0.025 49
+star_simul t2 0.025 49
+star_simul worst 0.025 49
+star_simul normal 0.025 50
+star_simul t1 0.025 50
+star_simul t2 0.025 50
+star_simul worst 0.025 50
+lalonde_simul normal 0.025 1
+lalonde_simul t1 0.025 1
+lalonde_simul t2 0.025 1
+lalonde_simul worst 0.025 1
+lalonde_simul normal 0.025 2
+lalonde_simul t1 0.025 2
+lalonde_simul t2 0.025 2
+lalonde_simul worst 0.025 2
+lalonde_simul normal 0.025 3
+lalonde_simul t1 0.025 3
+lalonde_simul t2 0.025 3
+lalonde_simul worst 0.025 3
+lalonde_simul normal 0.025 4
+lalonde_simul t1 0.025 4
+lalonde_simul t2 0.025 4
+lalonde_simul worst 0.025 4
+lalonde_simul normal 0.025 5
+lalonde_simul t1 0.025 5
+lalonde_simul t2 0.025 5
+lalonde_simul worst 0.025 5
+lalonde_simul normal 0.025 6
+lalonde_simul t1 0.025 6
+lalonde_simul t2 0.025 6
+lalonde_simul worst 0.025 6
+lalonde_simul normal 0.025 7
+lalonde_simul t1 0.025 7
+lalonde_simul t2 0.025 7
+lalonde_simul worst 0.025 7
+lalonde_simul normal 0.025 8
+lalonde_simul t1 0.025 8
+lalonde_simul t2 0.025 8
+lalonde_simul worst 0.025 8
+lalonde_simul normal 0.025 9
+lalonde_simul t1 0.025 9
+lalonde_simul t2 0.025 9
+lalonde_simul worst 0.025 9
+lalonde_simul normal 0.025 10
+lalonde_simul t1 0.025 10
+lalonde_simul t2 0.025 10
+lalonde_simul worst 0.025 10
+lalonde_simul normal 0.025 11
+lalonde_simul t1 0.025 11
+lalonde_simul t2 0.025 11
+lalonde_simul worst 0.025 11
+lalonde_simul normal 0.025 12
+lalonde_simul t1 0.025 12
+lalonde_simul t2 0.025 12
+lalonde_simul worst 0.025 12
+lalonde_simul normal 0.025 13
+lalonde_simul t1 0.025 13
+lalonde_simul t2 0.025 13
+lalonde_simul worst 0.025 13
+lalonde_simul normal 0.025 14
+lalonde_simul t1 0.025 14
+lalonde_simul t2 0.025 14
+lalonde_simul worst 0.025 14
+lalonde_simul normal 0.025 15
+lalonde_simul t1 0.025 15
+lalonde_simul t2 0.025 15
+lalonde_simul worst 0.025 15
+lalonde_simul normal 0.025 16
+lalonde_simul t1 0.025 16
+lalonde_simul t2 0.025 16
+lalonde_simul worst 0.025 16
+lalonde_simul normal 0.025 17
+lalonde_simul t1 0.025 17
+lalonde_simul t2 0.025 17
+lalonde_simul worst 0.025 17
+lalonde_simul normal 0.025 18
+lalonde_simul t1 0.025 18
+lalonde_simul t2 0.025 18
+lalonde_simul worst 0.025 18
+lalonde_simul normal 0.025 19
+lalonde_simul t1 0.025 19
+lalonde_simul t2 0.025 19
+lalonde_simul worst 0.025 19
+lalonde_simul normal 0.025 20
+lalonde_simul t1 0.025 20
+lalonde_simul t2 0.025 20
+lalonde_simul worst 0.025 20
+lalonde_simul normal 0.025 21
+lalonde_simul t1 0.025 21
+lalonde_simul t2 0.025 21
+lalonde_simul worst 0.025 21
+lalonde_simul normal 0.025 22
+lalonde_simul t1 0.025 22
+lalonde_simul t2 0.025 22
+lalonde_simul worst 0.025 22
+lalonde_simul normal 0.025 23
+lalonde_simul t1 0.025 23
+lalonde_simul t2 0.025 23
+lalonde_simul worst 0.025 23
+lalonde_simul normal 0.025 24
+lalonde_simul t1 0.025 24
+lalonde_simul t2 0.025 24
+lalonde_simul worst 0.025 24
+lalonde_simul normal 0.025 25
+lalonde_simul t1 0.025 25
+lalonde_simul t2 0.025 25
+lalonde_simul worst 0.025 25
+lalonde_simul normal 0.025 26
+lalonde_simul t1 0.025 26
+lalonde_simul t2 0.025 26
+lalonde_simul worst 0.025 26
+lalonde_simul normal 0.025 27
+lalonde_simul t1 0.025 27
+lalonde_simul t2 0.025 27
+lalonde_simul worst 0.025 27
+lalonde_simul normal 0.025 28
+lalonde_simul t1 0.025 28
+lalonde_simul t2 0.025 28
+lalonde_simul worst 0.025 28
+lalonde_simul normal 0.025 29
+lalonde_simul t1 0.025 29
+lalonde_simul t2 0.025 29
+lalonde_simul worst 0.025 29
+lalonde_simul normal 0.025 30
+lalonde_simul t1 0.025 30
+lalonde_simul t2 0.025 30
+lalonde_simul worst 0.025 30
+lalonde_simul normal 0.025 31
+lalonde_simul t1 0.025 31
+lalonde_simul t2 0.025 31
+lalonde_simul worst 0.025 31
+lalonde_simul normal 0.025 32
+lalonde_simul t1 0.025 32
+lalonde_simul t2 0.025 32
+lalonde_simul worst 0.025 32
+lalonde_simul normal 0.025 33
+lalonde_simul t1 0.025 33
+lalonde_simul t2 0.025 33
+lalonde_simul worst 0.025 33
+lalonde_simul normal 0.025 34
+lalonde_simul t1 0.025 34
+lalonde_simul t2 0.025 34
+lalonde_simul worst 0.025 34
+lalonde_simul normal 0.025 35
+lalonde_simul t1 0.025 35
+lalonde_simul t2 0.025 35
+lalonde_simul worst 0.025 35
+lalonde_simul normal 0.025 36
+lalonde_simul t1 0.025 36
+lalonde_simul t2 0.025 36
+lalonde_simul worst 0.025 36
+lalonde_simul normal 0.025 37
+lalonde_simul t1 0.025 37
+lalonde_simul t2 0.025 37
+lalonde_simul worst 0.025 37
+lalonde_simul normal 0.025 38
+lalonde_simul t1 0.025 38
+lalonde_simul t2 0.025 38
+lalonde_simul worst 0.025 38
+lalonde_simul normal 0.025 39
+lalonde_simul t1 0.025 39
+lalonde_simul t2 0.025 39
+lalonde_simul worst 0.025 39
+lalonde_simul normal 0.025 40
+lalonde_simul t1 0.025 40
+lalonde_simul t2 0.025 40
+lalonde_simul worst 0.025 40
+lalonde_simul normal 0.025 41
+lalonde_simul t1 0.025 41
+lalonde_simul t2 0.025 41
+lalonde_simul worst 0.025 41
+lalonde_simul normal 0.025 42
+lalonde_simul t1 0.025 42
+lalonde_simul t2 0.025 42
+lalonde_simul worst 0.025 42
+lalonde_simul normal 0.025 43
+lalonde_simul t1 0.025 43
+lalonde_simul t2 0.025 43
+lalonde_simul worst 0.025 43
+lalonde_simul normal 0.025 44
+lalonde_simul t1 0.025 44
+lalonde_simul t2 0.025 44
+lalonde_simul worst 0.025 44
+lalonde_simul normal 0.025 45
+lalonde_simul t1 0.025 45
+lalonde_simul t2 0.025 45
+lalonde_simul worst 0.025 45
+lalonde_simul normal 0.025 46
+lalonde_simul t1 0.025 46
+lalonde_simul t2 0.025 46
+lalonde_simul worst 0.025 46
+lalonde_simul normal 0.025 47
+lalonde_simul t1 0.025 47
+lalonde_simul t2 0.025 47
+lalonde_simul worst 0.025 47
+lalonde_simul normal 0.025 48
+lalonde_simul t1 0.025 48
+lalonde_simul t2 0.025 48
+lalonde_simul worst 0.025 48
+lalonde_simul normal 0.025 49
+lalonde_simul t1 0.025 49
+lalonde_simul t2 0.025 49
+lalonde_simul worst 0.025 49
+lalonde_simul normal 0.025 50
+lalonde_simul t1 0.025 50
+lalonde_simul t2 0.025 50
+lalonde_simul worst 0.025 50

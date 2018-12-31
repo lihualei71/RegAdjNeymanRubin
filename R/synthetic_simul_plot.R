@@ -4,29 +4,35 @@ library("ggplot2")
 
 load("../data/synthetic_simul_summary.RData")
 
+exprs <- expand.grid(Xtype = c("normal", "t1", "t2"),
+                     pi1 = c(0.2, 0.5))
+
+for (i in 1:length(res)){
+    res[[i]] <- res[[i]] %>%
+        filter(resid %in% c("normal", "t1", "t2"))
+}
+
 ## Plots for bias
-for (Xtype in c("normal", "t1", "t2")){
-    filename_root <- paste0("../figs/synthetic_simul_", Xtype)
+for (i in 1:nrow(exprs)){
+    Xtype <- as.character(exprs[i, 1])
+    pi1 <- as.numeric(exprs[i, 2])
+    
+    filename_root <- paste0("../figs/synthetic_simul_", Xtype, "_pi", pi1)
 
     ## Bias
     plot_bias <- res$bias %>% 
-        filter(X == Xtype) %>%
-        select(-X) %>%
+        filter(X == Xtype, tau == 0, pi == pi1) %>%
+        select(-X, -tau, -pi) %>%
         mutate(bias = pmin(bias, quantile(bias, 0.98))) %>%
-        dcast(exponent + seed + resid ~ tauhat_type,
-              value.var = "bias") %>%
-        mutate(ratio = ra_db / ra) %>%
-        group_by(exponent, resid) %>%
-        summarize(ratio = median(ratio)) %>%
+        group_by(exponent, resid, tauhat_type) %>%
+        summarize(bias = median(bias)) %>%
         ungroup() %>%
         mutate(resid = factor(resid, levels = c("normal", "t2", "t1", "worst"), labels = c("normal", "t(2)", "Cauchy", "worst"))) %>%
-        ggplot(aes(x = exponent, y = ratio)) +
-        geom_line(size = 0.7, color = "blue") +
-        geom_hline(yintercept = 1, color = "black") +
+        ggplot(aes(x = exponent, y = bias, color = tauhat_type)) +
+        geom_line(size = 0.7) +
         facet_grid( ~ resid) +
-        scale_y_continuous(breaks = c(0.4, 0.6, 0.8, 1)) +
         xlab("Exponent (log p / log n)") +
-        ylab("Ratio of Bias") +
+        ylab("Relative Bias") +
         theme_bw() +
         theme(panel.grid = element_blank(),
               legend.position = "bottom",
@@ -34,13 +40,13 @@ for (Xtype in c("normal", "t1", "t2")){
               strip.text = element_text(size = 12.5),
               legend.text = element_text(size = 12.5),
               legend.title = element_text(size = 15))
-    ggsave(filename = paste0(filename_root, "_bias.pdf"), plot_bias, width = 8, height = 2.5)
+    ggsave(filename = paste0(filename_root, "_bias.pdf"), plot_bias, width = 7, height = 3)
 
 ## Variance
     plot_sdinflate <- res$sdinflate %>%
-        filter(X == Xtype,
+        filter(X == Xtype, tau == 0, pi == pi1,
                sigmahat_type != "truth_de") %>%
-        select(-X) %>%
+        select(-X, -tau, -pi) %>%
         group_by(resid, sigmahat_type, exponent) %>%
         summarize(sdinflate = median(sdinflate)) %>%
         ungroup() %>%
@@ -58,7 +64,7 @@ for (Xtype in c("normal", "t1", "t2")){
         scale_linetype_manual(
             name = "type",
             values = c("dashed", "dotdash", "longdash", "solid", "twodash")) +
-        scale_y_continuous(breaks = c(0, 0.5, 1, 1.5)) + 
+        scale_y_continuous(breaks = c(0, 0.25, 0.5, 0.75, 1, 1.25, 1.5)) + 
         xlab("Exponent (log p / log n)") +
         ylab("Std. Inflated Ratio") +
         guides(color = guide_legend(nrow = 1),
@@ -71,13 +77,13 @@ for (Xtype in c("normal", "t1", "t2")){
               legend.text = element_text(size = 12),
               legend.title = element_text(size = 15),
               legend.key.width = unit(2.7, "line"))
-    ggsave(filename = paste0(filename_root, "_sdinflate.pdf"), plot_sdinflate, width = 8, height = 3)
+    ggsave(filename = paste0(filename_root, "_sdinflate.pdf"), plot_sdinflate, width = 7.5, height = 3.3)
     
 ## Coverage
     plot_coverage <- res$coverage %>%
-        filter(X == Xtype,
+        filter(X == Xtype, tau == 0, pi == pi1,
                sigmahat_type %in% c("truth", "theoretical", "HC2", "HC3")) %>%
-        select(-X) %>%
+        select(-X, -tau, -pi) %>%
         group_by(resid, tauhat_type, sigmahat_type, exponent) %>%
         summarize(coverage = median(coverage)) %>%
         ungroup() %>%
@@ -96,7 +102,7 @@ for (Xtype in c("normal", "t1", "t2")){
         scale_linetype_manual(
             name = "type",
             values = c("dotdash", "twodash", "longdash", "solid")) +
-        scale_y_continuous(breaks = c(0, 0.25, 0.5, 0.65, 0.75, 0.85, 0.95)) +
+        scale_y_continuous(breaks = c(0, 0.2, 0.5, 0.65, 0.75, 0.85, 0.95, 1), limits = c(0.5, 1)) +
         xlab("Exponent (log p / log n)") +
         ylab("Coverage") +
         theme_bw() +
@@ -107,13 +113,13 @@ for (Xtype in c("normal", "t1", "t2")){
               legend.text = element_text(size = 12.5),
               legend.title = element_text(size = 15),
               legend.key.width = unit(2.7, "line"))
-    ggsave(filename = paste0(filename_root, "_coverage.pdf"), plot_coverage, width = 8, height = 4.4)
+    ggsave(filename = paste0(filename_root, "_coverage.pdf"), plot_coverage, width = 6, height = 4.4)
 
 
 ## Normality
     plot_normality <- res$normality %>%
         filter(sigmahat_type == "truth",
-               X == Xtype) %>%
+               X == Xtype, tau == 0, pi == pi1) %>%
         select(-sigmahat_type, -X) %>%
         mutate(resid = factor(resid, levels = c("normal", "t2", "t1", "worst"), labels = c("normal", "t(2)", "Cauchy", "worst")),
                tauhat_type = factor(tauhat_type, levels = c("ra", "ra_db"), labels = c("un-debiased", "debiased"))) %>%
@@ -137,12 +143,12 @@ for (Xtype in c("normal", "t1", "t2")){
               strip.text = element_text(size = 12.5),
               legend.text = element_text(size = 12.5),
               legend.title = element_text(size = 15))
-    ggsave(filename = paste0(filename_root, "_normality.pdf"), plot_normality, width = 8, height = 4)
+    ggsave(filename = paste0(filename_root, "_normality.pdf"), plot_normality, width = 6, height = 4)
 
     ## Skewness
     plot_skewness <- res$skewness %>%
-        filter(X == Xtype) %>%
-        select(-X) %>%
+        filter(X == Xtype, tau == 0, pi == pi1) %>%
+        select(-X, -tau, -pi) %>%
         group_by(resid, tauhat_type, exponent) %>%
         summarize(med = median(skewness),
                   low = quantile(skewness, 0.25),
@@ -167,12 +173,12 @@ for (Xtype in c("normal", "t1", "t2")){
               strip.text = element_text(size = 12.5),
               legend.text = element_text(size = 12.5),
               legend.title = element_text(size = 15))
-    ggsave(filename = paste0(filename_root, "_skewness.pdf"), plot_skewness, width = 8, height = 4.4)
+    ggsave(filename = paste0(filename_root, "_skewness.pdf"), plot_skewness, width = 6, height = 4.4)
                
     ## Kurtosis
     plot_kurtosis <- res$kurtosis %>%
-        filter(X == Xtype) %>%
-        select(-X) %>%
+        filter(X == Xtype, tau == 0, pi == pi1) %>%
+        select(-X, -tau, -pi) %>%
         group_by(resid, tauhat_type, exponent) %>%
         summarize(med = median(kurtosis),
                   low = quantile(kurtosis, 0.25),
@@ -197,5 +203,5 @@ for (Xtype in c("normal", "t1", "t2")){
               strip.text = element_text(size = 12.5),
               legend.text = element_text(size = 12.5),
               legend.title = element_text(size = 15))
-    ggsave(filename = paste0(filename_root, "_kurtosis.pdf"), plot_kurtosis, width = 8, height = 4.4)
+    ggsave(filename = paste0(filename_root, "_kurtosis.pdf"), plot_kurtosis, width = 6, height = 4.4)
 }
