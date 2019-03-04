@@ -17,7 +17,7 @@ for (i in 1:nrow(exprs)){
     Xtype <- as.character(exprs[i, 1])
     pi1 <- as.numeric(exprs[i, 2])
     
-    filename_root <- paste0("../figs/synthetic_simul_", Xtype, "_pi", pi1)
+    filename_root <- paste0("../figs/synthetic_simul_", Xtype, "_pi", as.integer(pi1 * 10))
 
     ## Bias
     plot_bias <- res$bias %>% 
@@ -27,8 +27,11 @@ for (i in 1:nrow(exprs)){
         group_by(exponent, resid, tauhat_type) %>%
         summarize(bias = median(bias)) %>%
         ungroup() %>%
-        mutate(resid = factor(resid, levels = c("normal", "t2", "t1", "worst"), labels = c("normal", "t(2)", "Cauchy", "worst"))) %>%
-        ggplot(aes(x = exponent, y = bias, color = tauhat_type)) +
+        mutate(tauhat_type = factor(tauhat_type, levels = c("ra", "ra_db"), labels = c("un-debiased", "debiased")),
+               resid = factor(resid, levels = c("normal", "t2", "t1", "worst"), labels = c("normal", "t(2)", "Cauchy", "worst"))) %>%
+        ggplot(aes(x = exponent, y = bias,
+                   color = tauhat_type,
+                   linetype = tauhat_type)) +
         geom_line(size = 0.7) +
         facet_grid( ~ resid) +
         xlab("Exponent (log p / log n)") +
@@ -64,7 +67,7 @@ for (i in 1:nrow(exprs)){
         scale_linetype_manual(
             name = "type",
             values = c("dashed", "dotdash", "longdash", "solid", "twodash")) +
-        scale_y_continuous(breaks = c(0, 0.25, 0.5, 0.75, 1, 1.25, 1.5)) + 
+        scale_y_continuous(breaks = c(0.5, 0.75, 1, 1.25, 1.5), limits = c(0.5, 1.5)) + 
         xlab("Exponent (log p / log n)") +
         ylab("Std. Inflated Ratio") +
         guides(color = guide_legend(nrow = 1),
@@ -114,94 +117,4 @@ for (i in 1:nrow(exprs)){
               legend.title = element_text(size = 15),
               legend.key.width = unit(2.7, "line"))
     ggsave(filename = paste0(filename_root, "_coverage.pdf"), plot_coverage, width = 6, height = 4.4)
-
-
-## Normality
-    plot_normality <- res$normality %>%
-        filter(sigmahat_type == "truth",
-               X == Xtype, tau == 0, pi == pi1) %>%
-        select(-sigmahat_type, -X) %>%
-        mutate(resid = factor(resid, levels = c("normal", "t2", "t1", "worst"), labels = c("normal", "t(2)", "Cauchy", "worst")),
-               tauhat_type = factor(tauhat_type, levels = c("ra", "ra_db"), labels = c("un-debiased", "debiased"))) %>%
-        group_by(resid, tauhat_type, exponent) %>%
-        summarize(med = median(shapiro),
-                  low = quantile(shapiro, 0.25),
-                  high = quantile(shapiro, 0.75)) %>%
-        ggplot(aes(x = exponent, y = med)) +
-        geom_line(size = 0.7, color = "blue") +
-        geom_ribbon(aes(x = exponent, ymin = low, ymax = high),
-                    alpha = 0.25) +
-        facet_grid(tauhat_type ~ resid) +
-        scale_color_discrete(name = "type") +
-        scale_linetype_discrete(name = "type") +
-        xlab("Exponent (log p / log n)") +
-        ylab("P-value of Shapiro-Wilks Test") +
-        theme_bw() +
-        theme(panel.grid = element_blank(),
-              legend.position = "bottom",
-              axis.title = element_text(size = 15),
-              strip.text = element_text(size = 12.5),
-              legend.text = element_text(size = 12.5),
-              legend.title = element_text(size = 15))
-    ggsave(filename = paste0(filename_root, "_normality.pdf"), plot_normality, width = 6, height = 4)
-
-    ## Skewness
-    plot_skewness <- res$skewness %>%
-        filter(X == Xtype, tau == 0, pi == pi1) %>%
-        select(-X, -tau, -pi) %>%
-        group_by(resid, tauhat_type, exponent) %>%
-        summarize(med = median(skewness),
-                  low = quantile(skewness, 0.25),
-                  high = quantile(skewness, 0.75)) %>%
-        ungroup() %>%
-        mutate(resid = factor(resid, levels = c("normal", "t2", "t1", "worst"), labels = c("normal", "t(2)", "Cauchy", "worst")),
-               tauhat_type = factor(tauhat_type, levels = c("ra", "ra_db"), labels = c("un-debiased", "debiased"))) %>%
-        ggplot(aes(x = exponent, y = med)) +
-        geom_line(size = 0.7, color = "blue") +
-        geom_ribbon(aes(x = exponent, ymin = low, ymax = high),
-                    alpha = 0.25) +
-        geom_hline(yintercept = 0, color = "red") +
-        facet_grid(tauhat_type ~ resid) +
-        scale_color_discrete(name = "type") +
-        scale_linetype_discrete(name = "type") +
-        xlab("Exponent (log p / log n)") +
-        ylab("Skewness") +
-        theme_bw() +
-        theme(panel.grid = element_blank(),
-              legend.position = "bottom",
-              axis.title = element_text(size = 15),
-              strip.text = element_text(size = 12.5),
-              legend.text = element_text(size = 12.5),
-              legend.title = element_text(size = 15))
-    ggsave(filename = paste0(filename_root, "_skewness.pdf"), plot_skewness, width = 6, height = 4.4)
-               
-    ## Kurtosis
-    plot_kurtosis <- res$kurtosis %>%
-        filter(X == Xtype, tau == 0, pi == pi1) %>%
-        select(-X, -tau, -pi) %>%
-        group_by(resid, tauhat_type, exponent) %>%
-        summarize(med = median(kurtosis),
-                  low = quantile(kurtosis, 0.25),
-                  high = quantile(kurtosis, 0.75)) %>%
-        ungroup() %>%
-        mutate(resid = factor(resid, levels = c("normal", "t2", "t1", "worst"), labels = c("normal", "t(2)", "Cauchy", "worst")),
-               tauhat_type = factor(tauhat_type, levels = c("ra", "ra_db"), labels = c("un-debiased", "debiased"))) %>%
-        ggplot(aes(x = exponent, y = med)) +
-        geom_line(size = 0.7, color = "blue") +
-        geom_ribbon(aes(x = exponent, ymin = low, ymax = high),
-                    alpha = 0.25) +
-        geom_hline(yintercept = 3, color = "red") +
-        facet_grid(tauhat_type ~ resid) +
-        scale_color_discrete(name = "type") +
-        scale_linetype_discrete(name = "type") +
-        xlab("Exponent (log p / log n)") +
-        ylab("Kurtosis") +
-        theme_bw() +
-        theme(panel.grid = element_blank(),
-              legend.position = "bottom",
-              axis.title = element_text(size = 15),
-              strip.text = element_text(size = 12.5),
-              legend.text = element_text(size = 12.5),
-              legend.title = element_text(size = 15))
-    ggsave(filename = paste0(filename_root, "_kurtosis.pdf"), plot_kurtosis, width = 6, height = 4.4)
 }

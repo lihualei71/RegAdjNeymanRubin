@@ -5,7 +5,7 @@ normality_list <- list()
 skewness_list <- list()
 kurtosis_list <- list()
 
-params <- read.table("params_real_simul.txt")
+params <- read.table("../bash/params_real_simul.txt")
 for (i in 1:nrow(params)){
     data <- as.character(params[i, 1])
     resid_type <- params[i, 2]

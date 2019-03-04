@@ -22,3 +22,5 @@ do
     chmod 755 $filename
     sbatch $filename
 done < $params_filename
+
+rm -f *.out

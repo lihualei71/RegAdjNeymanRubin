@@ -17,7 +17,12 @@ for (i in 1:nrow(exprs)){
     Xtype <- as.character(exprs[i, 1])
     pi1 <- as.numeric(exprs[i, 2])
     
-    filename_root <- paste0("../figs/synthetic_simul_debiase_", Xtype, "_pi", pi1)
+    filename_root <- paste0("../figs/synthetic_simul_debiase_", Xtype, "_pi", as.integer(pi1 * 10))
+
+    xlimits <- switch(Xtype,
+                      normal = c(0, 1.5),
+                      t2 = c(0, 6),
+                      t1 = c(0, 15))
 
     ## Bias
     plot_bias <- res$bias %>% 
@@ -27,10 +32,13 @@ for (i in 1:nrow(exprs)){
         mutate(bias = pmin(bias, quantile(bias, 0.98))) %>%
         group_by(exponent, tauhat_type) %>%
         summarize(bias = median(bias)) %>%
-        ggplot(aes(x = exponent, y = bias, color = tauhat_type)) +
+        ggplot(aes(x = exponent, y = bias,
+                   color = tauhat_type,
+                   linetype = tauhat_type)) +
         geom_line(size = 0.7) +
         xlab("Exponent (log p / log n)") +
         ylab("Relative Bias") +
+        scale_y_continuous(limits = xlimits) +            
         theme_bw() +
         theme(panel.grid = element_blank(),
               legend.position = "bottom",

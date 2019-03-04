@@ -6,3 +6,5 @@ data/pacman_simul.RData
 data/star_simul.RData
 *backup*
 R/tmp.R
+process.R
+backup/*
