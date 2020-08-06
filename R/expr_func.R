@@ -1,10 +1,23 @@
 source("ols_adj.R")
-library("dplyr")
-library("reshape2")
+library("tidyverse")
 library("moments")
 
+thresh_entries <- function(X, tau = 0.025){
+    if (tau == 0){
+        return(X)
+    }
+    apply(X, 2, function(x){
+        thresh <- quantile(x, c(tau, 1 - tau))
+        x[x < thresh[1]] <- thresh[1]
+        x[x > thresh[2]] <- thresh[2]
+        return(x)
+    })
+}
+
 ols_adj_expr <- function(Y1, Y0, X, pi1 = 1 / 2,
-                         nreps = 1000){
+                         nreps = 1000,
+                         thresh = 0){
+    X <- thresh_entries(X, thresh)    
     n <- nrow(X)
     n1 <- floor(n * pi1)
     n0 <- n - n1
@@ -62,9 +75,8 @@ ols_adj_expr <- function(Y1, Y0, X, pi1 = 1 / 2,
     bias <- data.frame(tauhat_type = names(bias),
                        bias = as.numeric(bias))
     sdinflate <- (sigmahats[, -1] / sigmahats[, 1]) %>%
-        summarize_all(funs(mean)) %>%
-        melt(variable.name = "sigmahat_type",
-             value.name = "sdinflate")
+        summarize_all(mean) %>%
+        gather("sigmahat_type", "sdinflate")
     normality <- tstats %>%
         group_by(tauhat_type, sigmahat_type) %>%
         summarize(shapiro = shapiro.test(tstat)$p.value)
@@ -74,7 +86,9 @@ ols_adj_expr <- function(Y1, Y0, X, pi1 = 1 / 2,
 }
 
 gen_err <- function(X,
-                    type = c("worst", "normal", "t1", "t2", "t3")){
+                    type = c("worst", "hetero",
+                             "normal", "t1", "t2", "t3"),
+                    rho = 0){
     type <- type[1]
     n <- nrow(X)    
     if (type == "worst"){
@@ -88,7 +102,10 @@ gen_err <- function(X,
                        t1 = function(n){rt(n, 1)},
                        t2 = function(n){rt(n, 2)},
                        t3 = function(n){rt(n, 3)})
-        err <- list(err1 = func(n), err0 = func(n))
+        err1 <- func(n)
+        err0 <- func(n)
+        err <- list(err1 = err1,
+                    err0 = err1 * rho + err0 * sqrt(1 - rho^2))
     }
     return(err)
 }

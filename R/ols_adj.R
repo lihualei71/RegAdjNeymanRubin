@@ -3,7 +3,7 @@ center_colmeans <- function(x) {
     x - rep(xcenter, rep.int(nrow(x), ncol(x)))
 }
 
-ols_adj <- function(Yobs, T, X, adjtype = c("population", "sample")){
+ols_adj <- function(Yobs, T, X){
     if (is.logical(T)){
         T <- which(T)
     } else if (is.numeric(T) && max(T) == 1 && min(T) == 0){
@@ -58,7 +58,7 @@ ols_adj <- function(Yobs, T, X, adjtype = c("population", "sample")){
     Delta0 <- sum(lscores0 * e0) / n0
     bias <- -n0 / n1 * Delta1 + n1 / n0 * Delta0
     tauhat_res$ra_db <- tauhat_res$ra - bias
-    
+
     ## Using sample leverage scores    
     lscores1 <- hat(X[T, ])
     lscores0 <- hat(X[-T, ])

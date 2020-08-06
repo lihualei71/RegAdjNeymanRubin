@@ -8,3 +8,6 @@ data/star_simul.RData
 R/tmp.R
 process.R
 backup/*
+*Biometrika*
+*tar.gz
+cluster_raw_data/*
